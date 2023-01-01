@@ -52,8 +52,8 @@ var canvas = document.getElementById("Waves");
 var ctx = canvas.getContext("2d");
 var centerScreen;
 var frame = 0;
-var camera = new Vec3(0,0,0);
-var floor = 0;
+var camera = new Vec3(0,-1,0);
+var floor = -1;
 var mx = 0;
 var my = 0;
 var mousedown = false;
@@ -243,7 +243,7 @@ function Draw()
     let colors = ["#fa143b","#8714fa","#14fa4a","#149efa","#FFFFFF"]
 
     ctx.lineWidth = 3
-    let room_count = 6;
+    let room_count = 7;
     for (let i = 0; i < room_count; i++)
     {
         let ci = (i);
@@ -251,17 +251,17 @@ function Draw()
         {
             ci = ci - colors.length;
         }
-        DrawRoom(-i, colors[ci])
+        DrawRoom(-i+1, colors[ci])
         if(i != room_count-1)
         {
-            if(Button(0,-0.33-i,0.25,0.1,true))
+            if(Button(0,-0.33-i+1,0.25,0.1,true))
             {
                 if(mousedown == true)
                 {
                     floor += 1;
                 }
             }
-            if(Button(0,-1+0.33-i,0.25,0.1,false))
+            if(Button(0,-1+0.33-i+1,0.25,0.1,false))
             {
                 if(mousedown == true)
                 {
@@ -270,6 +270,9 @@ function Draw()
             }
         }
     }
+
+    //Warning
+    DrawText("Epilepsy Warning",32,new Vec3(0,1,0))
 
     //Floor 1
     for (let i = 0; i < 64; i++)
