@@ -66,6 +66,14 @@ burgergame2.src = "img/Photomode2.png";
 const burgergame3 = new Image(256*2.5, 144*2.5);
 burgergame3.src = "img/Photomode3.png";
 
+//Images
+const badbogs1 = new Image(256*2.5, 144*2.5);
+badbogs1.src = "img/BadBogs.png";
+const badbogs2 = new Image(256*2.5, 144*2.5);
+badbogs2.src = "img/BadBogs1.png";
+const badbogs3 = new Image(256*2.5, 144*2.5);
+badbogs3.src = "img/BadBogs2.png";
+
 const burgerclicker = new Image(256*2.5, 144*2.5);
 burgerclicker.src = "img/burgerclicker.png";
 
@@ -243,7 +251,7 @@ function Draw()
     let colors = ["#fa143b","#8714fa","#14fa4a","#149efa","#FFFFFF"]
 
     ctx.lineWidth = 3
-    let room_count = 7;
+    let room_count = 8;
     for (let i = 0; i < room_count; i++)
     {
         let ci = (i);
@@ -385,12 +393,17 @@ function Draw()
     }
 
     DrawText("Burger Game",64,new Vec3(0,-1.9,0.25))
-    DrawImage(burgergame1,new Vec3(-0.25,-2.15,0.25),0.8/2,0.45/2,16,0.005,false)
-    DrawImage(burgergame2,new Vec3(0.25,-2.15,0.25),0.8/2,0.45/2,16,0.005,false)
-    DrawImage(burgergame3,new Vec3(0,-2.15,0.25),0.8/2,0.45/2,16,0.005,false)
+    DrawImage(burgergame1,new Vec3(-0.25,-2.15,0.25),0.8/2,0.45/2,16,0.005,true)
+    DrawImage(burgergame2,new Vec3(0.25,-2.15,0.25),0.8/2,0.45/2,16,0.005,true)
+    DrawImage(burgergame3,new Vec3(0,-2.15,0.25),0.8/2,0.45/2,16,0.005,true)
 
-    DrawText("Burger Clicker",64,new Vec3(0,-2.8,0.25))
+    DrawText("Burger Clicker (Click To Play)",64,new Vec3(0,-2.8,0.25))
     DrawImage(burgerclicker,new Vec3(0,-3.075,0.25),0.8/1.5,0.45/1.5,16,0.005,true,"https://large-guys.github.io/burgerclicker.github.io/")
+
+    DrawText("Bad Bogs Demo (Click To Play)",64,new Vec3(0,-3.9,0.25))
+    DrawImage(badbogs1,new Vec3(-0.25,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/1h3e0F0-sGC-n43yflprmLFWloIvCMoX3/view?usp=sharing")
+    DrawImage(badbogs2,new Vec3(0.25,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/1h3e0F0-sGC-n43yflprmLFWloIvCMoX3/view?usp=sharing")
+    DrawImage(badbogs3,new Vec3(0,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/1h3e0F0-sGC-n43yflprmLFWloIvCMoX3/view?usp=sharing")
 
     //About
     for (let i = 0; i < 64; i++)
@@ -403,37 +416,37 @@ function Draw()
         let z = (64-i)/1024;
 
         //A
-        Line(new Vec3(-0.1,-0.5,0),new Vec3(0.0,0.5,0),new Vec3(-0.2,-4,z),0.1,colors[ci]);
-        Line(new Vec3(0.0,0.5,0),new Vec3(0.1,-0.5,0),new Vec3(-0.2,-4,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,-0.5,0),new Vec3(0.0,0.5,0),new Vec3(-0.2,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(0.0,0.5,0),new Vec3(0.1,-0.5,0),new Vec3(-0.2,-room_count+3,z),0.1,colors[ci]);
 
         //B
-        Line(new Vec3(-0.1,0.5,0),new Vec3(-0.1,-0.5,0),new Vec3(-0.1,-4,z),0.1,colors[ci]);
-        Line(new Vec3(-0.1,0,0),new Vec3(0.1,-0.5,0),new Vec3(-0.1,-4,z),0.1,colors[ci]);
-        Line(new Vec3(-0.1,0.5,0),new Vec3(0.1,0,0),new Vec3(-0.1,-4,z),0.1,colors[ci]);
-        Line(new Vec3(0.1,0,0),new Vec3(-0.1,0,0),new Vec3(-0.1,-4,z),0.1,colors[ci]);
-        Line(new Vec3(0.1,-0.5,0),new Vec3(-0.1,-0.5,0),new Vec3(-0.1,-4,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0.5,0),new Vec3(-0.1,-0.5,0),new Vec3(-0.1,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0,0),new Vec3(0.1,-0.5,0),new Vec3(-0.1,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0.5,0),new Vec3(0.1,0,0),new Vec3(-0.1,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(0.1,0,0),new Vec3(-0.1,0,0),new Vec3(-0.1,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(0.1,-0.5,0),new Vec3(-0.1,-0.5,0),new Vec3(-0.1,-room_count+3,z),0.1,colors[ci]);
 
         //O
-        Line(new Vec3(-0.1,0,0),new Vec3(-0,0.5,0),new Vec3(-0,-4,z),0.1,colors[ci]);
-        Line(new Vec3(0,0.5,0),new Vec3(0.1,0,0),new Vec3(-0,-4,z),0.1,colors[ci]);
-        Line(new Vec3(-0.1,0,0),new Vec3(-0,-0.5,0),new Vec3(-0,-4,z),0.1,colors[ci]);
-        Line(new Vec3(0,-0.5,0),new Vec3(0.1,0,0),new Vec3(-0,-4,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0,0),new Vec3(-0,0.5,0),new Vec3(-0,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(0,0.5,0),new Vec3(0.1,0,0),new Vec3(-0,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0,0),new Vec3(-0,-0.5,0),new Vec3(-0,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(0,-0.5,0),new Vec3(0.1,0,0),new Vec3(-0,-room_count+3,z),0.1,colors[ci]);
 
         //U
-        Line(new Vec3(-0.1,0.5,0),new Vec3(0.0,-0.5,0),new Vec3(0.1,-4,z),0.1,colors[ci]);
-        Line(new Vec3(0.0,-0.5,0),new Vec3(0.1,0.5,0),new Vec3(0.1,-4,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0.5,0),new Vec3(0.0,-0.5,0),new Vec3(0.1,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(0.0,-0.5,0),new Vec3(0.1,0.5,0),new Vec3(0.1,-room_count+3,z),0.1,colors[ci]);
 
         //T
-        Line(new Vec3(0,0.5,0),new Vec3(0,-0.5,0),new Vec3(0.2,-4,z),0.1,colors[ci]);
-        Line(new Vec3(-0.1,0.5,0),new Vec3(0.1,0.5,0),new Vec3(0.2,-4,z),0.1,colors[ci]);
+        Line(new Vec3(0,0.5,0),new Vec3(0,-0.5,0),new Vec3(0.2,-room_count+3,z),0.1,colors[ci]);
+        Line(new Vec3(-0.1,0.5,0),new Vec3(0.1,0.5,0),new Vec3(0.2,-room_count+3,z),0.1,colors[ci]);
 
     }
 
-    DrawText("I am a game dev, and now a web developer!",32,new Vec3(0,-4.8+0.025,0.25))
-    DrawText("Above are some of my projects.",32,new Vec3(0,-4.9+0.025,0.25))
-    DrawText("I am currently working on my",32,new Vec3(0,-5.1+0.025,0.25))
-    DrawText("3D-Physics-Sandbox-Cooking Game,",32,new Vec3(0,-5.2+0.025,0.25))
-    DrawText("Burger Game. (Very creative!)",32,new Vec3(0,-5.3+0.025,0.25))
+    DrawText("I am a game dev, and now a web developer!",32,new Vec3(0,-room_count+3-0.8+0.025,0.25))
+    DrawText("Above are some of my projects.",32,new Vec3(0,-room_count+3-0.9+0.025,0.25))
+    DrawText("I am currently working on my",32,new Vec3(0,-room_count+2-0.1+0.025,0.25))
+    DrawText("2D-Physics-Sandbox Game,",32,new Vec3(0,-room_count+2-0.2+0.025,0.25))
+    DrawText("Bad Bogs!",32,new Vec3(0,-room_count+2-0.3+0.025,0.25))
     mousedown = false;
     requestAnimationFrame(Draw)
 }
