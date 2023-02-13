@@ -401,9 +401,9 @@ function Draw()
     DrawImage(burgerclicker,new Vec3(0,-3.075,0.25),0.8/1.5,0.45/1.5,16,0.005,true,"https://large-guys.github.io/burgerclicker.github.io/")
 
     DrawText("Bad Bogs Demo (Click To Play)",64,new Vec3(0,-3.9,0.25))
-    DrawImage(badbogs1,new Vec3(-0.25,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/1h3e0F0-sGC-n43yflprmLFWloIvCMoX3/view?usp=sharing")
-    DrawImage(badbogs2,new Vec3(0.25,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/1h3e0F0-sGC-n43yflprmLFWloIvCMoX3/view?usp=sharing")
-    DrawImage(badbogs3,new Vec3(0,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/1h3e0F0-sGC-n43yflprmLFWloIvCMoX3/view?usp=sharing")
+    DrawImage(badbogs1,new Vec3(-0.25,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/12QWC9mQwQDO8KO4pxaHj17AIKNzxDZIT/view?usp=sharing")
+    DrawImage(badbogs2,new Vec3(0.25,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/12QWC9mQwQDO8KO4pxaHj17AIKNzxDZIT/view?usp=sharing")
+    DrawImage(badbogs3,new Vec3(0,-4.15,0.25),0.8/2,0.45/2,16,0.005,true,"https://drive.google.com/file/d/12QWC9mQwQDO8KO4pxaHj17AIKNzxDZIT/view?usp=sharing")
 
     //About
     for (let i = 0; i < 64; i++)
