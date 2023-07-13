@@ -445,8 +445,8 @@ function Draw()
     DrawText("I am a game dev, and now a web developer!",32,new Vec3(0,-room_count+3-0.8+0.025,0.25))
     DrawText("Above are some of my projects.",32,new Vec3(0,-room_count+3-0.9+0.025,0.25))
     DrawText("I am currently working on my",32,new Vec3(0,-room_count+2-0.1+0.025,0.25))
-    DrawText("2D-Physics-Sandbox Game,",32,new Vec3(0,-room_count+2-0.2+0.025,0.25))
-    DrawText("Bad Bogs!",32,new Vec3(0,-room_count+2-0.3+0.025,0.25))
+    DrawText("Open World-Cooking-Physics-Sandbox-Game,",32,new Vec3(0,-room_count+2-0.2+0.025,0.25))
+    DrawText("called Burger Game!",32,new Vec3(0,-room_count+2-0.3+0.025,0.25))
     mousedown = false;
     requestAnimationFrame(Draw)
 }
